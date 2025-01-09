@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar elementos del DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Título original</h1>
+    <div id="contenedor">Contenido original</div>
+    <a id="enlace">Haz clic aquí</a>
+    <div class="caja">Caja de ejemplo</div>
+
+    <script>
+        // Cambiar el texto del título
+        const titulo = document.querySelector('#titulo');
+        titulo.textContent = 'Nuevo Título js';
+
+        // Cambiar contenido con etiquetas HTML
+        const contenedor = document.querySelector('#contenedor');
+        contenedor.innerHTML = '<em>Texto en cursiva con etiquetas js</em>';
+
+        // Cambiar el atributo del enlace
+        const enlace = document.querySelector('#enlace');
+        enlace.setAttribute('href', 'https://developer.mozilla.org');
+        enlace.textContent = 'Ir a MDN';
+
+        // Cambiar estilos de la caja
+        const caja = document.querySelector('.caja');
+        caja.style.backgroundColor = 'green';
+        caja.style.color = 'white';
+        caja.style.fontSize = '20px';
+    </script>
+</body>
+</html>
