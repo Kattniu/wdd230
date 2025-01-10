@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+    .nav-menu {
+        justify-content: flex-start;
+    }
+
+    main {
+        grid-template-columns: 2fr 1fr;
+    }
+    header span {
+        font-size: 4rem;
+        font-family: "Kanit", serif;
+    }
+    .current-weather img {
+        max-width: 120px;
+    }
+
+    .card ul {
+        padding: 0 2rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+}

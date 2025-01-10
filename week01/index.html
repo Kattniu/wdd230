@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="course assignment portal">
+    <meta name="author" content="Katherine Gonzales">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/larger.css">
+    
+    <title>Katherine Gonzales - WDD 230 - Web Fronted Development</title>
+</head>
+<body>
+    <header>
+        <div id="profile-container">
+            <img src="images/yo.jpg" alt="Katherine Gonzales" id="profile-image">
+            <span>Katherine Gonzales</span>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <section class="card">
+            <h2>Learning Activities</h2>
+            <ul>
+                <li><a href="#">Week 01: Layout | Media Query | JS Pen</a></li>
+                <li><a href="#">Week 02</a></li>
+                <li><a href="#">Week 03</a></li>
+                <li><a href="#">Week 04</a></li>
+                <li><a href="#">Week 05</a></li>
+                <li><a href="#">Week 06</a></li>
+                <li><a href="#">Week 07</a></li>
+            </ul>
+    </section>
+    <div class="content-container">
+        <!-- Clima Actual -->
+        <div class="current-weather card">
+            <h2>Current Weather</h2>
+            <img id="weather-icon" alt="Weather Icon">
+            <div class="weather-info">
+                <p id="temp" class="temperature">--°C</p>
+                <p id="weather-description" class="weather-description">Loading...</p>
+                <ul class="weather-details">
+                    <li><strong>High:</strong> <span id="high">--°C</span></li>
+                    <li><strong>Low:</strong> <span id="low">--°C</span></li>
+                    <li><strong>Humidity:</strong> <span id="humidity">--%</span></li>
+                    <li><strong>Sunrise:</strong> <span id="sunrise">--:--</span></li>
+                    <li><strong>Sunset:</strong> <span id="sunset">--:--</span></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Pronóstico del Clima -->
+        <section class="weather-forecast card">
+            <h2>Weather Forecast</h2>
+            <ul class="forecast-list">
+                <li>Today: <span id="forecast-today">--°C</span></li>
+                <li>Tomorrow: <span id="forecast-wed">--°C</span></li>
+                <li>After Tomorrow: <span id="forecast-thu">--°C</span></li>
+            </ul>
+        </section>
+    </div>    
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Katherine Gonzales, Italy</p>
+        <p id="lastModified">Last modified: </p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+</body>
+</html>
