@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico del body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF; /* Fondo blanco para un look limpio */
+    color: #282a26; /* Texto en gris oscuro */
+    line-height: 1.6;
+    padding: 20px;
+
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #a3cd9e; /* Gris oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Estilo de las secciones */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+/* Títulos de las secciones */
+h2 {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #585a8a; /* Gris oscuro */
+    margin-bottom: 15px;
+}
+
+/* Estilo de los párrafos y listas */
+p, ul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding-left: 20px;
+    position: relative;
+}
+
+
+/* Estilo de la imagen */
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo de la imagen */
+    height: auto;
+    border: 3px solid #BDC3C7; /* Borde sutil de color gris */
+    border-radius: 8px;
+}
+.color{
+    background-color: burlywood;
+}
+.color h2{
+    color:rgba(255, 255, 255, 0.995);
+}
+.typography{
+    text-align: center;
+}
+/* Estilo del footer */
+footer {
+    background-color: #acd4e8; /* Gris oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p, ul {
+        font-size: 0.9rem;
+    }
+}
