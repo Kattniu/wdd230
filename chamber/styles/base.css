@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #1C1C1C; /* Charcoal Gray */
+    --text-color: #333333; /* Dark Gray */
+    --secondary-color: #003366; /* Milan Blue */
+    --accent-color: #D4AF37; /* Golden Yellow */
+    --otro-color:gray;
+    --background-color: #FFFFFF; /* White */
+    --primary-color: #1C1C1C; /* Charcoal Gray - Para fondos oscuros o encabezados */
+    --secondary-color: #003366; /* Milan Blue - Para enlaces y elementos destacados */
+    --light-gray: #F5F5F5; /* Muy claro para fondos secundarios */
+    --medium-gray: #CCCCCC; /* Gris medio para bordes o secciones separadoras */
+    --dark-gray: #333333; /* Gris oscuro para texto principal */
+    --highlight-blue: #4A90E2; /* Azul brillante para botones secundarios o destacados */
+    --neutral-tan: #E5D5B8; /* Beige claro que complementa al dorado */
+
+  }
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*HEADER: Base styles for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: var(--accent-color);
+    border-bottom: 2px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  header img.logo {
+    border-radius: 50%;
+    margin: 1rem;
+  }
+  header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Kanit", serif;
+    color: var(--light-gray);
+    font-size:2rem;
+    margin: 0;
+
+  }
+  /*Index: menu */
+  nav {
+    position: relative;
+  }
+  .menuLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    text-align: right;
+    right: 0;
+    list-style-type: none;
+    background-color: #003366;
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que se superponga */
+  }
+  .menuLinks li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block; /* Cada enlace en una nueva línea */
+    color:var(--neutral-tan);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, color 0.4s ease;
+  }
+  .menuLinks li a:hover {
+    color: var(--light-gray)
+  }
+.active {
+    border-bottom: 2px solid var(--highlight-blue);
+}
+  .menuLinks.show {
+    display: flex;
+  }
+/*HEADER:  Hamburger boton menu  styles */   
+#menuToggle {
+    display: block;
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+#menuToggle::before {
+content: "\2630";
+font-size: 2rem; 
+color: var(--light-gray);
+    }
+
+/*INDEX : MAIN  */
+main{
+    line-height: 1.6;
+}
+/* INDEX: Imagen y boton de la pagina*/
+.hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    width: 100%;
+    overflow: hidden;
+}
+.imagen-hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hará que la imagen cubra toda la pantalla */
+    filter: brightness(60%); /* Baja la iluminación para hacer más legible el texto sobre la imagen */
+}
+.boton-hero {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    z-index: 2;
+}
+.boton-hero-join {
+    background-color:#e44dad;
+    color: var(--background-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.boton-hero-join:hover {
+    background-color: #509cff;
+}
+/* INDEX: contenedor del weather*/
+.event-weather-container {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 50px;
+    padding: 10px;
+    margin-top: 40px;
+}
+/* Individual Sections for Events, Weather, etc. */
+.events, .weather, .weather-forecast {
+    background-color:var(--otro-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* FOOTER : ----*/
+footer {
+    background-color:var(--light-gray);  
+    text-align: center;
+    padding: 0 1rem;
+    }
+.footer-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.footer-social h3, .footer-contact h3 {
+    font-size: 1.2rem;
+    color:var(--accent-color); 
+}
+.footer-social .social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+.footer-social .social-icons a img {
+    width: 30px;
+    height:30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-social .social-icons a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+.footer-contact a {
+    color:var(--highlight-blue); 
+    text-decoration: none;
+}
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+.footer-info {
+    color:var(--dark-gray);
+}
+#year {
+    font-weight: bold; /* Año en negrita */
+}

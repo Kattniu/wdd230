@@ -1,0 +1,34 @@
+@media (min-width: 768px){
+    /*INDEX: Contenedor del weather*/
+.event-weather-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 50px;
+        margin-top: 40px;
+}
+/*INDEX: BOTON de menu */
+#menuToggle {
+        display: none;        
+}
+.menuLinks {
+    display: flex; /* Alinear elementos en fila */
+    flex-direction: row;
+    position: static; /* Restablecer posición */
+    justify-content: flex-end; /* Alinea el menú al lado derecho */
+    gap: 3rem; /* Espaciado entre los enlaces */
+    background-color: transparent; /* Sin fondo */
+    box-shadow: none; /* Sin sombra */
+    padding: 0;
+}
+.menuLinks a {
+    color: var(--background-color);
+    font-weight: bold; /* Sin negrita para un diseño más limpio */
+    padding: 1rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+ }
+ .active {
+    border-bottom: 2px solid var(--medium-gray);
+}
+}

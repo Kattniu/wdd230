@@ -8,9 +8,10 @@
     <meta property="og:title" content="Milan Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/kathy.jpg" >
+    <meta property="og:url" content="https://kattniu.github.io/wdd230/chamber/index.html<">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.ico">
@@ -18,32 +19,95 @@
 </head>
 <body>
     <header>
-            <img src="images/logo-top.webp" class="logo" alt="Chamber of Commerce logo" width="80" height="100">
-            <h1>Chamber of Commerce - Italy</h1>
-            <nav id="animation">
-                <ul class="menuLinks">
-                  <li><a href="#" class="active">Home</a></li>
-                  <li><a href="#">Directory</a></li>
-                  <li><a href="#">Discover</a></li>
-                  <li><a href="#">Join</a></li>
-                </ul>
-            </nav>
-    </header>
+        <img src="images/logo.png" class="logo" loading="lazy" alt="Logo chamber of commerce" width="100" height="100">
+        <h1>CHAMBER OF COMMERCE - Italy</h1>
+        <nav>
+          <button id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="menuLinks">
+          </button>
+          <ul id="menuLinks" class="menuLinks">
+            <li><a class="active" href="index.html" title="home">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" title="Join">Join</a></li>
+            <li><a href="discover.html" title="Discover">Discover</a></li>
+          </ul>
+        </nav>
+      </header>
+      
 
-    <main>
+    <main class="main-index">  
         <section class="hero">
-            <h2>Welcome to Milan Chamber of Commerce</h2>
-            <p>Discover the vibrant community of Milan, explore local businesses, and stay updated with the latest news.</p>
-          </section>
-          <section class="weather">
-            <h3>Weather Update</h3>
-            <p>Stay prepared with real-time weather updates.</p>
-          </section>
-    </main>
+            <img src="images/milan.jpeg" alt="Hero Image" class="imagen-hero"> 
+            <h1 class="titulo-hero">Chamber Italy </h1>
+            <div class="boton-hero">
+            <a href="#" class="boton-hero-join">Join Us</a>
+            </div>
+        </section>
+
+        <section class="event-weather-container">
+            <section class="events">
+                <h2>Events</h2>
+                <div id="events-placeholder">
+                    <p>No events available at the moment.</p>
+                </div>
+            </section>
+
+            <section class="weather">
+                <div class="current-weather">
+                    <h2>Current Weather</h2>
+                    <img id="weather-icon" alt="Weather Icon">
+                        <div class="weather-info">
+                            <!-- Estos elementos se actualizarán con JavaScript -->
+                            <p id="temp">--°C</p>
+                            <p id="weather-description">Loading...</p>
+                            <ul>
+                                <li><strong>High:</strong> <span id="high">--°C</span></li>
+                                <li><strong>Low:</strong> <span id="low">--°C</span></li>
+                                <li><strong>Humidity:</strong> <span id="humidity">--%</span></li>
+                                <li><strong>Sunrise:</strong> <span id="sunrise">--:-- AM</span></li>
+                                <li><strong>Sunset:</strong> <span id="sunset">--:-- PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+                
+            <section>
+            <div class="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <ul>
+                    <li>Today: <span id="forecast-today">--°F</span></li>
+                    <li>Tomorrow: <span id="forecast-wed">--°F</span></li>
+                    <li>After Tomorrow: <span id="forecast-thu">--°F</span></li>
+                </ul>
+            </div>
+            </section>
+
+      </section>
+
+</main>
+
 <footer>
-    <p>&copy; <span id="current-year"></span> Katherine Gonzales, Italy</p>
-    <p id="lastModified">Last modified:</p>
+    <div class="footer-container">
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://it-it.facebook.com/" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/katherine-gonzales-5b8375256/" aria-label="LinkedIn"><img src="images/link.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:kathe.adriana24@gmail.com">kathe.adriana24@gmail.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+            <p>&copy;<span id="year"></span> Katherine Gonzales | Lima, Peru</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+        
+        </div>
 </footer>
 <script src="scripts/script.js"></script>
+<script src="scripts/scriptMenu.js"></script>
+
 </body>
 </html>
