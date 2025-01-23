@@ -5,3 +5,5 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 //Aquí, queremos conservar parte del texto existente: "Last modified: ".
 //Al usar +=, no reemplazamos este texto; en lugar de eso, le añadimos dinámicamente el valor de document.lastModified.
 document.getElementById('lastModified').textContent += document.lastModified;
+
+
