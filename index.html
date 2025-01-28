@@ -8,7 +8,7 @@
     <meta property="og:title" content="WDD230- TEAM ">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/yo.jpg" >
-    <meta property="og:url" content="https://kattniu.github.io/wdd230/chamber/index.html<">
+    <meta property="og:url" content="https://kattniu.github.io/wdd230/chamber/index.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -32,7 +32,19 @@
             <li><a href="site-plan.html">Site Plan</a></li>
         </ul>
     </nav>
-    
+    <div class="hero">
+        <picture>
+            <!-- Para pantallas pequeñas -->
+            <source srcset="images/small.webp" media="(max-width: 400px)">
+            <!-- Para pantallas medianas -->
+            <source srcset="images/medium.webp" media="(max-width: 1000px)">
+            <!-- Imagen predeterminada para pantallas grandes -->
+            <img src="images/large.webp" alt="Beautiful temple scenery"
+                 alt="Beautiful temple scenery" loading="lazy"
+                 width="1500" height="750">
+            <span>Temple - Italy Rome</span>
+        </picture>
+    </div>
     <main>
     <section class="card">
             <h2>Learning Activities</h2>
@@ -46,6 +58,8 @@
                 <li><a href="#">Week 07</a></li>
             </ul>
     </section>
+
+
     <div class="content-container">
         <!-- Clima Actual -->
         <div class="current-weather-card">
@@ -65,14 +79,15 @@
         </div>
     
         <!-- Pronóstico del Clima -->
-        <section class="weather-forecast-card">
+        <div class="weather-forecast-card">
             <h2>Weather Forecast</h2>
             <ul class="forecast-list">
                 <li>Today: <span id="forecast-today">--°C</span></li>
                 <li>Tomorrow: <span id="forecast-wed">--°C</span></li>
                 <li>After Tomorrow: <span id="forecast-thu">--°C</span></li>
             </ul>
-        </section>
+        </div>
+        
     </div>    
     </main>
 

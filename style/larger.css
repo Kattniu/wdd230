@@ -2,9 +2,10 @@
     .nav-menu {
         justify-content: flex-start;
     }
-
     main {
+        display: grid;
         grid-template-columns: 2fr 1fr;
+        gap: 40px;
     }
     header span {
         font-size: 4rem;
