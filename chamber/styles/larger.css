@@ -86,5 +86,11 @@ th, td {
     border-radius: 10px; /* Opcional, para esquinas redondeadas */
 }
 
+.join {
+    max-width: 900px; /* Controla el ancho del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
 
 }

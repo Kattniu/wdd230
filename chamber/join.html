@@ -32,83 +32,69 @@
           </ul>
         </nav>
     </header>
+  <main class="join">
+    <h2>Membership Levels & Benefits</h2>
+        <section class="membership-cards">
+          <div class="card" id="np-card">
+              <h3>NP Membership</h3>
+              <button id="openButton1">More Info</button>
+          </div>
+          <div class="card" id="bronze-card">
+              <h3>Bronze Membership</h3>
+              <button id="openButton2">More Info</button>
+          </div>
+          <div class="card" id="silver-card">
+              <h3>Silver Membership</h3>
+              <button id="openButton3">More Info</button>
+          </div>
+          <div class="card" id="gold-card">
+              <h3>Gold Membership</h3>
+              <button id="openButton4">More Info</button>
+          </div>
+  
+          <dialog id="dialogBox">
+              <div></div>
+              <button id="closeButton"> Close</button>
+          </dialog>
+      </section>
 
 
-    <form action="submit_form.php" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" required>
-        
+    <form action="thankyou.html" method="get">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="title">Title/Position:</label>
+        <input type="text" id="title" name="title" pattern="[a-zA-Z\s-]{7,}" title="Only letters, hyphens, and spaces. Minimum 7 characters.">
+
         <label for="email">Email:</label>
-        <input type="email" id="email" name="user_email" required>
-      
-        <input type="submit" value="Submit">
-      </form>
-      <form>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" placeholder="Escribe tu nombre">
-      
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Escribe tu correo">
-      
-        <button type="submit">Enviar</button>
-      </form>
-      
-      <ul>
-        <li>Comprar leche</li>
-        <li>Ir al gimnasio</li>
-        <li>Leer un libro</li>
-      </ul>
-      <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabla de Comparación de Cuentas</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <table>
-    <caption>Tabla 1: Comparación de Características de Cuentas</caption>
-    <thead>
-      <tr>
-        <th>Característica</th>
-        <th>Cuenta Básica</th>
-        <th>Cuenta Premium</th>
-        <th>Cuenta Pro</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Acceso a Cursos</td>
-        <td>✔️</td>
-        <td>✔️</td>
-        <td>✔️</td>
-      </tr>
-      <tr>
-        <td>Soporte en Vivo</td>
-        <td>❌</td>
-        <td>✔️</td>
-        <td>✔️</td>
-      </tr>
-      <tr>
-        <td>Acceso a Recursos Premium</td>
-        <td>❌</td>
-        <td>✔️</td>
-        <td>✔️</td>
-      </tr>
-      <tr>
-        <td>Consultoría Personalizada</td>
-        <td>❌</td>
-        <td>❌</td>
-        <td>✔️</td>
-      </tr>
-    </tbody>
-  </table>
-</body>
-</html>
+        <input type="email" id="email" name="email" required placeholder="example@domain.com">
 
-            
-</body>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="business">Business/Organization Name:</label>
+        <input type="text" id="business" name="business" required>
+
+        <label for="membership">Membership Level:</label>
+        <select id="membership" name="membership">
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+
+        <label for="description">Business Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <button type="submit">Join Now</button>
+    </form>
+</main>
+
 <footer>
     <div class="footer-container">
         <div class="footer-social">
@@ -129,6 +115,7 @@
     </div>
 </footer>
 <script src="scripts/scriptMenu.js"></script>
+<script src="scripts/join.js"></script>
 </body>
 </html>
 

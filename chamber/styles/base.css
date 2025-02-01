@@ -12,7 +12,7 @@
     --dark-gray: #333333; /* Gris oscuro para texto principal */
     --highlight-blue: #4A90E2; /* Azul brillante para botones secundarios o destacados */
     --neutral-tan: #E5D5B8; /* Beige claro que complementa al dorado */
-
+    --color:rgb(224, 90, 162)  ;
   }
 
 body{
@@ -281,47 +281,129 @@ th, td {
     font-size: 1rem;
     box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.1);
 }
-/* Cambiar color del primer elemento de la lista */
-ul li:first-child {
-    color: red;
-  }
-  
-  /* Cambiar el color al pasar el mouse por encima */
-  ul li:hover {
-    background-color: lightgray;
-  }
-  
-  /* Estilo para las filas impares de la lista */
-  ul li:nth-child(odd) {
-    background-color: #c4e6b1;
-  }
-  
-  /* Cambiar el color de los elementos que no son la primera tarea */
-  ul li:not(:first-child) {
-    color: blue;
-  }
-  input {
-    padding: 8px;
-    border: 2px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  /* Cambiar el borde cuando el campo tiene el foco */
-  input:focus {
-    border-color: blue; /* Cambia el color del borde cuando el campo está enfocado */
-    outline: none; /* Elimina el borde adicional del navegador */
-  }
-  
-  /* Añadir color de fondo al botón */
-  button {
-    padding: 8px 16px;
-    background-color: green;
+
+.membership-info {
+    background: #eef;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.thank-you {
+    text-align: center;
+}
+
+.thank-you .button {
+    display: inline-block;
+    background: var(--primary-color);
     color: white;
-    border: none;
-    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+}
+
+.thank-you .button:hover {
+    background: darkblue;
+}
+
+.join {
+  background: white;
+  padding: 20px;
+  margin: 40px;
+  max-width: 800px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Estilos de las tarjetas de membresía */
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: var(--primary-color);
+}
+
+button {
+  background: var(--secondary-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: var(--highlight-blue);
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+}
+
+/* Inputs, selects y textarea */
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  background: var(--primary-color);
+}
+
+button[type="submit"]:hover {
+  background: #1a252f;
+}
+/* Estilos para el cuadro de diálogo */
+dialog {
+  width: 300px;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+#closeButton {
+  background: #e74c3c;
+}
+
+#closeButton:hover {
+  background: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .membership-cards {
+      grid-template-columns: 1fr;
   }
-  
-  button:focus {
-    background-color: darkgreen; /* Cambia el color del botón cuando está enfocado */
-  }
-  
+}
