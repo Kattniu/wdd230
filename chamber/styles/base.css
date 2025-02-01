@@ -281,3 +281,47 @@ th, td {
     font-size: 1rem;
     box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.1);
 }
+/* Cambiar color del primer elemento de la lista */
+ul li:first-child {
+    color: red;
+  }
+  
+  /* Cambiar el color al pasar el mouse por encima */
+  ul li:hover {
+    background-color: lightgray;
+  }
+  
+  /* Estilo para las filas impares de la lista */
+  ul li:nth-child(odd) {
+    background-color: #c4e6b1;
+  }
+  
+  /* Cambiar el color de los elementos que no son la primera tarea */
+  ul li:not(:first-child) {
+    color: blue;
+  }
+  input {
+    padding: 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* Cambiar el borde cuando el campo tiene el foco */
+  input:focus {
+    border-color: blue; /* Cambia el color del borde cuando el campo está enfocado */
+    outline: none; /* Elimina el borde adicional del navegador */
+  }
+  
+  /* Añadir color de fondo al botón */
+  button {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:focus {
+    background-color: darkgreen; /* Cambia el color del botón cuando está enfocado */
+  }
+  
