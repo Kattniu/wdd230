@@ -456,7 +456,6 @@ dialog {
 /*-------DIRECTORY----------------------------------------*/
 .directory {
   background-color: var(--dark-gray);
-  padding: 1rem;
   margin: 0.5rem;
 }
 #cards {
