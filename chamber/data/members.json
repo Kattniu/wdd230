@@ -1,0 +1,59 @@
+{
+    "members": [
+      {
+        "name": "Eni S.p.A.",
+        "address": "Piazzale Enrico Mattei, 1, 00144 Roma RM, Italia",
+        "phone": "+39 06 59821",
+        "website": "https://www.eni.com",
+        "imageUrl": "images/eni.webp",
+        "membershipLevel": "Gold",
+        "description": "Multinazionale attiva nel settore dell'energia e della petro-chimica."
+      },
+      {
+        "name": "Fiat Chrysler Automobiles",
+        "address": "Piazzale Angelo Pes, 6, 10121 Torino TO, Italia",
+        "phone": "+39 011 1234567",
+        "website": "https://www.fcagroup.com",
+        "imageUrl": "images/fiat.webp",
+        "membershipLevel": "Gold",
+        "description": "Leader nel settore automobilistico con una vasta gamma di marchi."
+      },
+      {
+        "name": "Gucci",
+        "address": "Via Tornabuoni, 73, 50123 Firenze FI, Italia",
+        "phone": "+39 055 123456",
+        "website": "https://www.gucci.com",
+        "imageUrl": "images/gucci.webp",
+        "membershipLevel": "Silver",
+        "description": "Rinomata azienda di moda di lusso e accessori."
+      },
+      {
+        "name": "Prada",
+        "address": "Galleria Vittorio Emanuele II, 2, 20121 Milano MI, Italia",
+        "phone": "+39 02 12345678",
+        "website": "https://www.prada.com",
+        "imageUrl": "images/prada.webp",
+        "membershipLevel": "Silver",
+        "description": "Iconica casa di moda italiana, famosa per borse e abbigliamento."
+      },
+      {
+        "name": "Benetton Group",
+        "address": "Via Chiaretto, 2, 31020 Ponzano Veneto TV, Italia",
+        "phone": "+39 0423 123456",
+        "website": "https://www.benetton.com",
+        "imageUrl": "images/benetton.webp",
+        "membershipLevel": "Bronze",
+        "description": "Gruppo internazionale nel settore dell'abbigliamento e degli accessori."
+      },
+      {
+        "name": "Armani",
+        "address": "Via Manzoni, 31, 20121 Milano MI, Italia",
+        "phone": "+39 02 76543210",
+        "website": "https://www.armani.com",
+        "imageUrl": "images/armani.webp",
+        "membershipLevel": "Gold",
+        "description": "Marca di alta moda e lifestyle, simbolo dell'eleganza italiana."
+      }
+    ]
+  }
+  

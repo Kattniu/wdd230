@@ -10,6 +10,13 @@
 #menuToggle {
         display: none;        
 }
+.menuLinks li a {
+    color:var(--light-gray);
+  }
+.menuLinks li a:hover {
+    color: var(--background-color);
+    box-shadow: 0 2px 2px var(--shadow-medium);
+  }
 .menuLinks {
     display: flex; /* Alinear elementos en fila */
     flex-direction: row;
@@ -26,12 +33,11 @@
     padding: 1rem;
     border-radius: 2px;
     text-decoration: none;
-    transition: background-color 0.2s ease,
+    transition: background-color 0.3s ease,
  }
  .active {
-    border-bottom: 2px solid var(--medium-gray);
+    border-bottom: 3px solid var(--border-color);
 }
-
 /* calendario*/
 .calendar-container {
     width: 100%;
@@ -48,10 +54,8 @@ th, td {
     width: 10%;
     padding: 10px;
     text-align: center;
-    color:#4598f8;
     border: 1px solid var(--medium-gray);
 }
-
 .sidebar {
     padding: 15px;
 }
@@ -74,23 +78,38 @@ th, td {
     gap: 20px; /* Espacio entre imágenes */
     justify-items: center;
 }
-
 .gallery figure {
     text-align: center;
     max-width: 100%;
 }
-
 .gallery img {
     width: 100%;
     height: auto;
     border-radius: 10px; /* Opcional, para esquinas redondeadas */
 }
-
 .join {
     max-width: 900px; /* Controla el ancho del contenido */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    padding: 20px; /* Espaciado interno */
+    margin: 2rem auto; /* Centra el contenido horizontalmente */
+    padding: 50px; /* Espaciado interno */
     text-align: center; /* Asegura que el texto esté centrado */
+    border-radius: 8px;
 }
-
+.card h4 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+    padding: 0 20px;
+  }
+  .card button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
 }
