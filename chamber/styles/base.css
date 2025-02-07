@@ -453,110 +453,117 @@ dialog {
   }
 }
 
-/*-----------------DIRECTORY----------------------------------------*/
+/*-------DIRECTORY----------------------------------------*/
 .directory {
   background-color: var(--dark-gray);
-  padding: 2rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
 }
-#cards{
+#cards {
   border-radius: 8px;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
   box-shadow: 2px 10px 10px 10px rgba(0,0,0,0.2);
   background-color: var(--dark-gray);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
-/* Vista Grid: el contenedor #cards tiene display flex */
+/* En pantallas pequeñas, para la vista grid convertimos a un layout en columna */
 #cards.grid {
-  display: grid; /*RECUERDA: Esto activa el diseño en cuadricula*/
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /*Divide el espacio en |columnas| adaptables.
-  Cada columna tiene un   |ancho |  mínimo de "250px".
-  auto-fit: ajusta el número de columnas según el ancho de la pantalla.
-  1fr permite que las columnas ocupen el espacio disponible.
-*/
-  padding: 2rem; /*Espacio interno*/
-  border-radius: 10px; /* Esquinas redondeadas */
+  gap:1rem;
+  padding: 2rem;
+  border-radius: 10px;
 }
 .grid section {
   text-align: center;
-  padding: 2rem;
-  background-color:var(--otro-color); 
+  padding: 1rem;
+  margin: 0 5rem;
+  background-color: var(--otro-color);
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-  color:var(--background-color); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--background-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .grid section:hover {
-  transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba y si lo queremos hacia abajo solo debemos quitar el "-"*/
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más prominente */
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
-.grid img{
-  max-width: 60%;
+
+.grid img {
+  max-width: 80%; /* Aumentamos un poco el ancho para aprovechar el espacio */
   border-radius: 50%;
-  border: 3px solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
-/* Vista Lista: las tarjetas ocupan todo el ancho */
+
+/* Vista Lista en pantallas pequeñas */
 #cards.list {
-  display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
-  flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
-  gap: 0.5rem; /* Espaciado entre elementos */
-  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
 }
+
 #cards.list .card {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-.list section {
-  display: flex;/* Flexbox para organizar los contenidos */
-  /*Esto permite que los elementos dentro de la tarjeta (por ejemplo, la imagen, el nombre,
-   la dirección) se alineen en una fila horizontal.*/
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem; /* Espaciado entre elementos */
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(255, 253, 253, 0.2); /* Sombra ligera */
 
+/* En vista lista, mostramos los elementos en columna */
+.list section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(255, 253, 253, 0.2);
 }
+
 .list section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(255, 254, 254, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(255, 254, 254, 0.3);
 }
+
 .list a {
   text-decoration: none;
   font-weight: bold;
   color: var(--button-hover-blue);
   transition: color 0.3s ease;
 }
+
 .list p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 #cards.list img {
-  max-width: 50px;
+  max-width: 40px;
   height: auto;
   border-radius: 50%;
 }
-.view-controls{
-  text-align: center;/*Alineamos el contenido al centro */
-  margin-bottom: 2rem;/*Aregamos un espacio inferior para que este mas lejos del contenido de abajo*/
+
+/* Ajuste en controles de vista para pantallas pequeñas */
+.view-controls {
+  text-align: center;
+  margin-bottom: 1rem;
 }
-.view-controls button { /*Estilos basicos para nuestros botones grid y list*/
-  padding: 0.8rem 1.2rem; /*Definimos un espacio interno amplio para que los botones seas comodos y estilosos de clicar */
-  font-weight: bold;/*texto negrita*/
-  font-size: 1.5rem;
-  background-color: var(--dark-gray); 
+
+.view-controls button {
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: var(--dark-gray);
   color: var(--accent-color);
-  border: 2px solid var(--today-yellow); 
+  border: 2px solid var(--today-yellow);
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease; /* Transición suave para hover (para cualquier cambio, como por ejemplo : el cambio del color)*/
+  transition: all 0.3s ease;
 }
-.view-controls button:hover {
-  background-color: var(--accent-color); 
-  color: var(--dark-gray); 
 
-  }
+.view-controls button:hover {
+  background-color: var(--accent-color);
+  color: var(--dark-gray);
+}
