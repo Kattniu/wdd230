@@ -448,8 +448,28 @@ dialog {
       grid-template-columns: 1fr;
   }
 }
-
 /*-------DIRECTORY----------------------------------------*/
+.view-controls {
+  padding: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.view-controls button {
+    padding: 0.8rem 1.2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: var(--dark-gray);
+    color: var(--accent-color);
+    border: 2px solid var(--today-yellow);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+.view-controls button:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-gray);
+  }
+  
 @media (max-width: 768px) { 
   #cards {
     display: flex;
