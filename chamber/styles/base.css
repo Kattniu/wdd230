@@ -326,7 +326,7 @@ h3{
 }
 .join {
   max-width: 900px;
-  margin: 2rem auto;
+  margin: 2rem ;
   padding: 50px;
   text-align: center;
   border-radius:8px;
@@ -334,7 +334,7 @@ h3{
   box-shadow: var(--shadow-medium);
 }
 .join h2 {
-  color: var(--text-color);
+  color: var(--dark-gray);
   margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 600;
@@ -360,7 +360,6 @@ h3{
   text-align: center;
   position: relative;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -382,13 +381,14 @@ h3{
 button:hover {
   background: var(--color);
 }
+
 /* Estilos del formulario */
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 form label {
   font-weight: bold;
@@ -409,7 +409,7 @@ form textarea {
 /* Botón de envío del formulario */
 form button[type="submit"] {
   background: var(--secondary-color);
-  color: #fff;
+  color: var(--background-color);
   border: none;
   padding: 12px;
   border-radius: var(--border-radius);
@@ -446,6 +446,7 @@ dialog {
       grid-template-columns: 1fr;
   }
 }
+
 /*-------DIRECTORY----------------------------------------*/
 .view-controls {
   padding: 20px;
@@ -481,7 +482,6 @@ dialog {
     width: 100%;
     text-align: center;
   }
-
   /* Centrar botones de cambio de vista */
   .view-controls {
     display: flex;
