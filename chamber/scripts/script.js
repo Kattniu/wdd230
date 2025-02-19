@@ -4,22 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const lon = 9.1800;
   const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
   fetch(currentWeatherUrl)
     .then(response => response.json())
     .then(updateCurrentWeather)
     .catch(error => console.error('Error obteniendo el clima actual:', error));
-
   fetch(forecastUrl)
     .then(response => response.json())
     .then(updateForecast)
     .catch(error => console.error('Error obteniendo el pronóstico del clima:', error));
-
   showMeetGreetBanner();
   loadSpotlightMembers();
 });
 
-// 🟢 Actualizar datos del clima actual
+
+//Actualizar datos del clima actual
 function updateCurrentWeather(data) {
   document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   document.getElementById('temp').textContent = `${Math.round(data.main.temp)}°C`;
@@ -31,10 +29,9 @@ function updateCurrentWeather(data) {
   document.getElementById('sunset').textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
 }
 
-// 🟢 Actualizar pronóstico del clima
+//Actualizar pronóstico del clima
 function updateForecast(data) {
   const dailyTemps = {};
-
   data.list.forEach(entry => {
     const date = entry.dt_txt.split(' ')[0]; // Extrae la fecha YYYY-MM-DD
     if (!dailyTemps[date]) {
@@ -42,7 +39,6 @@ function updateForecast(data) {
     }
     dailyTemps[date].max = Math.max(dailyTemps[date].max, entry.main.temp);
   });
-
   const forecastDays = Object.values(dailyTemps);
   
   // Validar si hay suficientes datos antes de asignar valores
@@ -52,16 +48,12 @@ function updateForecast(data) {
     document.getElementById('forecast-thu').textContent = `${Math.round(forecastDays[2].max)}°C`;
   }
 }
-
-// 🟢 Capitalizar la descripción del clima
 function capitalizeWeather(description) {
   return description
     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
-
-// 🟢 Mostrar banner "Meet & Greet"
 function showMeetGreetBanner() {
   const today = new Date().getDay(); // 1 = Lunes, 2 = Martes, 3 = Miércoles
   if (today >= 1 && today <= 3) {
@@ -72,26 +64,22 @@ function showMeetGreetBanner() {
     `;
     banner.style.cssText = "background: yellow; text-align: center; padding: 10px; font-weight: bold;";
     document.body.prepend(banner);
-
     document.getElementById('close-banner').addEventListener('click', () => {
       banner.style.display = 'none';
     });
-  }
+  } 
 }
-
-// 🟢 Cargar anuncios 'Spotlight' de los miembros
+// Cargar anuncios 'Spotlight' de los miembros
 function loadSpotlightMembers() {
-  fetch('data/members.json')  // ⬅ Cambio aquí: Asegurarse de la ruta correcta
+  fetch('data/members.json')  //
     .then(response => response.json())
     .then(data => {
       const eligibleMembers = data.members.filter(member =>
         member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
       );
       const selectedMembers = shuffleArray(eligibleMembers).slice(0, 2); // Selecciona 2 al azar
-
       const spotlightContainer = document.getElementById('spotlight-container');
       spotlightContainer.innerHTML = '';
-
       selectedMembers.forEach(member => {
         const memberDiv = document.createElement('div');
         memberDiv.classList.add('spotlight-member');
@@ -106,8 +94,7 @@ function loadSpotlightMembers() {
     })
     .catch(error => console.error('Error cargando miembros:', error));
 }
-
-// 🟢 Función para mezclar aleatoriamente una lista
+// Función para mezclar aleatoriamente una lista
 function shuffleArray(array) {
   return array.sort(() => Math.random() - 0.5);
 }

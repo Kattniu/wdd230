@@ -22,7 +22,6 @@
     --submit-hover-dark-blue: #1a252f; 
     --shadow-medium: rgba(0, 0, 0, 0.2); /* Sombra más oscura */
   }
-
 body{
     box-sizing: border-box;
     margin: 0;
@@ -112,7 +111,7 @@ main{
 .index{
   background-color: var(--background-color);
 }
-/* INDEX: Imagen y boton de la pagina*/
+/* INDEX:----- Imagen y boton de la pagina*/
 .hero {
     position: relative;
     height: 100vh; /* Full screen height */
@@ -132,7 +131,7 @@ main{
     z-index: 2;
 }
 .boton-hero-join {
-    background-color:#e44dad;
+    background-color:var(--button-pink);
     color: var(--background-color);
     padding: 15px 30px;
     border-radius: 5px;
@@ -142,9 +141,9 @@ main{
     transition: background-color 0.3s ease;
 }
 .boton-hero-join:hover {
-    background-color: #509cff;
+    background-color: var(--button-hover-blue);
 }
-/* INDEX: contenedor del weather*/
+/* INDEX:------contenedor del weather*/
 .event-weather-container {
     display: grid;
     grid-template-columns:1fr;
@@ -249,7 +248,7 @@ th, td {
     align-items: center;
     text-align: center;
 }
-/*---- DISCOVER: gallery */
+/*---- DISCOVER: gallery -----------------------------*/
 .gallery {
     grid-template-columns: 1fr; 
 }
@@ -305,7 +304,7 @@ h3{
 .section h3{
   color: var(--secondary-color);
 }
-/* JOIN -----------------------------*/
+/* JOIN -----------------------------------*/
 .membership-info {
     padding: 10px;
     border-radius: var(--border-radius);
@@ -317,13 +316,13 @@ h3{
 .thank-you .button {
     display: inline-block;
     background: var(--primary-color);
-    color: white;
+    color:var(--background-color);
     padding: 10px 20px;
     border-radius: var(--border-radius);
     text-decoration: none;
 }
 .thank-you .button:hover {
-    background: darkblue;
+    background:var(--highlight-blue);
 }
 .join {
   max-width: 900px;
@@ -368,7 +367,7 @@ h3{
 }
 .card button {
   background: var(--dark-gray);
-  color: white;
+  color: var(--light-gray);
   padding: 10px 15px;
   border: none;
   cursor: pointer;
@@ -418,7 +417,6 @@ form button[type="submit"] {
   font-size: 1rem;
   transition: background 0.3s ease;
 }
-
 form button[type="submit"]:hover {
   background: var(--button-hover-blue);
 }
@@ -501,7 +499,6 @@ dialog {
     max-width: 95%;
     padding: 0.8rem;
   }
-
   .card img {
     max-width: 60px;
   }
@@ -545,17 +542,15 @@ dialog {
   max-width: 60px;
   height: auto;
   border-radius: 50%;
-  margin-bottom: 10px;
 }
 .spotlight-member h3 {
   font-size: 18px;
-  margin: 3px 0;
+  margin: 2px 0;
 }
 .spotlight-member p {
   font-size: 14px;
   color: var(--dark-gray);
 }
-
 .spotlight-member a {
   display: inline-block;
   margin-top: 10px;
@@ -563,7 +558,31 @@ dialog {
   font-weight: bold;
   text-decoration: none;
 }
-
 .spotlight-member a:hover {
   text-decoration: underline;
+}
+/* Botón de cierre */
+#meet-greet-banner button {
+  background:var(--background-color);
+  border: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#meet-greet-banner{
+  text-align: center;
+  align-items: center;
+  font-size: 1.1rem;
+  animation: slideIn 0.5s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
